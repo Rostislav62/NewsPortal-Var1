@@ -1,0 +1,40 @@
+{% extends 'news/default.html' %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Создание статьи" %}{% endblock %}
+
+{% block header %}{% trans "Создание статьи" %}{% endblock %}
+
+{% block content %}
+    <h2>{% trans "СОЗДАНИЕ СТАТЬИ" %}</h2>
+
+    <!-- Отображение имени и фамилии автора -->
+    <h3>{% trans "Автор:" %} {{ request.user.first_name }} {{ request.user.last_name }}</h3>
+
+    <form method="post">
+        {% csrf_token %}
+        <label>{% trans "Название статьи:" %}</label>
+        <input type="text" name="title" required>
+        <br>
+
+        <!-- Добавляем выбор категории -->
+        <label for="id_category">{% trans "Категория:" %}</label>
+        <select name="category" id="id_category">
+            <option value="">{% trans "Выберите категорию" %}</option>
+            {% for category in categories %}
+                <option value="{{ category.id }}">{{ category.name }}</option>
+            {% endfor %}
+        </select>
+        <br>
+
+        <label>{% trans "Содержание:" %}</label>
+        <textarea name="content" required></textarea>
+        <br>
+        <button type="submit">{% trans "Записать" %}</button>
+    </form>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+{% endblock %}

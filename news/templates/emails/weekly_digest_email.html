@@ -1,0 +1,22 @@
+<!-- Путь: templates/emails/weekly_digest_email.html -->
+{% load i18n %}
+
+<html>
+<head>
+    <title>{% trans "Еженедельный дайджест" %}</title>
+</head>
+<body>
+    <h1>{% trans "Еженедельный дайджест новых статей в категории" %} {{ category.name }}</h1>
+    <p>{% trans "Вот список новых статей за последнюю неделю:" %}</p>
+    <ul>
+        {% for article in new_articles %}
+            <li>
+                <strong>{{ article.title }}</strong> — {% trans "Автор" %}: {{ article.author_profile.user.get_full_name }}
+                <br>
+                <a href="http://127.0.0.1:8000/news/{{ article.pk }}">{% trans "Читать полностью" %}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <p>{% trans "С уважением," %}<br>{% trans "Команда сайта" %}</p>
+</body>
+</html>

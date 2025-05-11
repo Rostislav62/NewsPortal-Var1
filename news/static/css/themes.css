@@ -1,0 +1,117 @@
+/* static/css/themes.css */
+
+/* Переход для плавной смены тем */
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Светлая тема */
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Тёмная тема */
+body.dark {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Кнопка переключения темы */
+.theme-toggle-btn {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.theme-toggle-btn.light {
+    background-color: #ffffff;
+    color: #000000;
+}
+.theme-toggle-btn.dark {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Стили для основного контейнера контента */
+/* Светлая тема для контента */
+body.light .content-container {
+    background-color: #f9f9f9; /* Светлый фон для контента */
+    color: #000000; /* Тёмный текст */
+}
+
+/* Тёмная тема для контента */
+body.dark .content-container {
+    background-color: #444444; /* Тёмный фон для контента */
+    color: #ffffff; /* Светлый текст */
+}
+
+/* Стили для общего бокса result-item */
+
+/* Светлая тема */
+body.light .result-item {
+    background-color: #f9f9f9; /* Светлый фон */
+    color: #000000; /* Тёмный текст */
+    border: 1px solid #ddd; /* Светлая рамка */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Скруглённые углы */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Тёмная тема */
+body.dark .result-item {
+    background-color: #444444; /* Тёмный фон */
+    color: #ffffff; /* Светлый текст */
+    border: 1px solid #555; /* Тёмная рамка */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Скруглённые углы */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Убираем индивидуальные рамки у result-details и result-content */
+.result-details,
+.result-content {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Светлая тема: боксы */
+body.light form input,
+body.light form textarea,
+body.light form select {
+    background-color: #ffffff; /* Белый фон */
+    color: #000000; /* Чёрный текст */
+    border: 1px solid #ccc; /* Светлая рамка */
+}
+
+/* Тёмная тема: боксы */
+body.dark form input,
+body.dark form textarea,
+body.dark form select {
+    background-color: #333333; /* Тёмный фон */
+    color: #ffffff; /* Белый текст */
+    border: 1px solid #555; /* Тёмная рамка */
+}
+
+/* Светлая тема: активное состояние */
+body.light form input:focus,
+body.light form textarea:focus,
+body.light form select:focus {
+    background-color: #f9f9f9; /* Светлый фон при фокусе */
+    color: #000000; /* Чёрный текст */
+    border-color: #007bff; /* Синяя рамка при фокусе */
+}
+
+/* Тёмная тема: активное состояние */
+body.dark form input:focus,
+body.dark form textarea:focus,
+body.dark form select:focus {
+    background-color: #444444; /* Тёмный фон при фокусе */
+    color: #ffffff; /* Белый текст */
+    border-color: #28a745; /* Зелёная рамка при фокусе */
+}
