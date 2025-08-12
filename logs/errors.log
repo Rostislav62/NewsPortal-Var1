@@ -1,0 +1,1224 @@
+2025-08-12 13:27:23,091 ERROR /home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/utils/log.py Internal Server Error: /admin/news/category/ (<class 'AttributeError'>, AttributeError("Unable to lookup 'article' on Category or CategoryAdmin"), <traceback object at 0x753234380e80>)
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 334, in label_for_field
+    field = _get_non_gfk_field(model._meta, name)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 310, in _get_non_gfk_field
+    raise FieldDoesNotExist()
+django.core.exceptions.FieldDoesNotExist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 326, in result_list
+    headers = list(result_headers(cl))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 90, in result_headers
+    text, attr = label_for_field(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 362, in label_for_field
+    raise AttributeError(message)
+AttributeError: Unable to lookup 'article' on Category or CategoryAdmin
+2025-08-12 13:27:23,091 ERROR /home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/utils/log.py Internal Server Error: /admin/news/category/ (<class 'AttributeError'>, AttributeError("Unable to lookup 'article' on Category or CategoryAdmin"), <traceback object at 0x753234380e80>)
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 334, in label_for_field
+    field = _get_non_gfk_field(model._meta, name)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 310, in _get_non_gfk_field
+    raise FieldDoesNotExist()
+django.core.exceptions.FieldDoesNotExist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 326, in result_list
+    headers = list(result_headers(cl))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 90, in result_headers
+    text, attr = label_for_field(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 362, in label_for_field
+    raise AttributeError(message)
+AttributeError: Unable to lookup 'article' on Category or CategoryAdmin
+2025-08-12 13:27:23,093 ERROR /home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/servers/basehttp.py "GET /admin/news/category/ HTTP/1.1" 500 437858 None
+2025-08-12 13:27:23,093 ERROR /home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/servers/basehttp.py "GET /admin/news/category/ HTTP/1.1" 500 437858 None
+2025-08-12 13:27:28,736 ERROR /home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/utils/log.py Internal Server Error: /admin/news/rating/ (<class 'AttributeError'>, AttributeError("Unable to lookup 'article' on Rating or RatingAdmin"), <traceback object at 0x753234389b40>)
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 334, in label_for_field
+    field = _get_non_gfk_field(model._meta, name)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 310, in _get_non_gfk_field
+    raise FieldDoesNotExist()
+django.core.exceptions.FieldDoesNotExist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 326, in result_list
+    headers = list(result_headers(cl))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 90, in result_headers
+    text, attr = label_for_field(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 362, in label_for_field
+    raise AttributeError(message)
+AttributeError: Unable to lookup 'article' on Rating or RatingAdmin
+2025-08-12 13:27:28,736 ERROR /home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/utils/log.py Internal Server Error: /admin/news/rating/ (<class 'AttributeError'>, AttributeError("Unable to lookup 'article' on Rating or RatingAdmin"), <traceback object at 0x753234389b40>)
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 334, in label_for_field
+    field = _get_non_gfk_field(model._meta, name)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 310, in _get_non_gfk_field
+    raise FieldDoesNotExist()
+django.core.exceptions.FieldDoesNotExist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/template/library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 326, in result_list
+    headers = list(result_headers(cl))
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/templatetags/admin_list.py", line 90, in result_headers
+    text, attr = label_for_field(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 362, in label_for_field
+    raise AttributeError(message)
+AttributeError: Unable to lookup 'article' on Rating or RatingAdmin
+2025-08-12 13:27:28,738 ERROR /home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/servers/basehttp.py "GET /admin/news/rating/ HTTP/1.1" 500 437772 None
+2025-08-12 13:27:28,738 ERROR /home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/servers/basehttp.py "GET /admin/news/rating/ HTTP/1.1" 500 437772 None
+2025-08-12 14:33:21,975 ERROR /home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/utils/log.py Internal Server Error: /create/ (<class 'kombu.exceptions.OperationalError'>, OperationalError('Error 111 connecting to 127.0.0.1:6379. Connection refused.'), <traceback object at 0x746ad4270680>)
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 127, in reconnect_on_error
+    yield
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 177, in _consume_from
+    self._pubsub.subscribe(key)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 957, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 786, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/base.py", line 800, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 373, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 169, in consume_from
+    return self.start(task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 147, in start
+    self._consume_from(initial_task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 176, in _consume_from
+    with self.reconnect_on_error():
+  File "/home/ro/.pyenv/versions/3.10.18/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 130, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 384, in ensure
+    return retry_over_time(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/commands/core.py", line 2009, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 135, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/news/views.py", line 214, in post
+    self.send_article_notification(article)
+  File "/home/ro/Projects/NewsPortal/news/views.py", line 122, in send_article_notification
+    send_new_article_notification.delay(article.id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/base.py", line 798, in send_task
+    with P.connection._reraise_as_library_errors():
+  File "/home/ro/.pyenv/versions/3.10.18/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+2025-08-12 14:33:21,975 ERROR /home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/utils/log.py Internal Server Error: /create/ (<class 'kombu.exceptions.OperationalError'>, OperationalError('Error 111 connecting to 127.0.0.1:6379. Connection refused.'), <traceback object at 0x746ad4270680>)
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 127, in reconnect_on_error
+    yield
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 177, in _consume_from
+    self._pubsub.subscribe(key)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 957, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 786, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/base.py", line 800, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 373, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 169, in consume_from
+    return self.start(task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 147, in start
+    self._consume_from(initial_task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 176, in _consume_from
+    with self.reconnect_on_error():
+  File "/home/ro/.pyenv/versions/3.10.18/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 130, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 384, in ensure
+    return retry_over_time(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/commands/core.py", line 2009, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 135, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/news/views.py", line 214, in post
+    self.send_article_notification(article)
+  File "/home/ro/Projects/NewsPortal/news/views.py", line 122, in send_article_notification
+    send_new_article_notification.delay(article.id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/base.py", line 798, in send_task
+    with P.connection._reraise_as_library_errors():
+  File "/home/ro/.pyenv/versions/3.10.18/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+2025-08-12 14:34:04,770 ERROR /home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/utils/log.py Internal Server Error: /create/ (<class 'kombu.exceptions.OperationalError'>, OperationalError('Error 111 connecting to 127.0.0.1:6379. Connection refused.'), <traceback object at 0x746ad4214880>)
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 127, in reconnect_on_error
+    yield
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 177, in _consume_from
+    self._pubsub.subscribe(key)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 957, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 786, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/base.py", line 800, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 373, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 169, in consume_from
+    return self.start(task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 147, in start
+    self._consume_from(initial_task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 176, in _consume_from
+    with self.reconnect_on_error():
+  File "/home/ro/.pyenv/versions/3.10.18/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 130, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 384, in ensure
+    return retry_over_time(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/commands/core.py", line 2009, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 135, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/news/views.py", line 214, in post
+    self.send_article_notification(article)
+  File "/home/ro/Projects/NewsPortal/news/views.py", line 122, in send_article_notification
+    send_new_article_notification.delay(article.id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/base.py", line 798, in send_task
+    with P.connection._reraise_as_library_errors():
+  File "/home/ro/.pyenv/versions/3.10.18/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+2025-08-12 14:34:04,770 ERROR /home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/utils/log.py Internal Server Error: /create/ (<class 'kombu.exceptions.OperationalError'>, OperationalError('Error 111 connecting to 127.0.0.1:6379. Connection refused.'), <traceback object at 0x746ad4214880>)
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 127, in reconnect_on_error
+    yield
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 177, in _consume_from
+    self._pubsub.subscribe(key)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 957, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 786, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/base.py", line 800, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 373, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 169, in consume_from
+    return self.start(task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 147, in start
+    self._consume_from(initial_task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 176, in _consume_from
+    with self.reconnect_on_error():
+  File "/home/ro/.pyenv/versions/3.10.18/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 130, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 384, in ensure
+    return retry_over_time(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/commands/core.py", line 2009, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 135, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/news/views.py", line 214, in post
+    self.send_article_notification(article)
+  File "/home/ro/Projects/NewsPortal/news/views.py", line 122, in send_article_notification
+    send_new_article_notification.delay(article.id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/base.py", line 798, in send_task
+    with P.connection._reraise_as_library_errors():
+  File "/home/ro/.pyenv/versions/3.10.18/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+2025-08-12 14:34:04,773 ERROR /home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/servers/basehttp.py "POST /create/?article_type=article HTTP/1.1" 500 301487 None
+2025-08-12 14:34:04,773 ERROR /home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/servers/basehttp.py "POST /create/?article_type=article HTTP/1.1" 500 301487 None
+2025-08-12 14:42:42,510 ERROR /home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/utils/log.py Internal Server Error: /create/ (<class 'kombu.exceptions.OperationalError'>, OperationalError('Error 111 connecting to 127.0.0.1:6379. Connection refused.'), <traceback object at 0x746acedde100>)
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 127, in reconnect_on_error
+    yield
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 177, in _consume_from
+    self._pubsub.subscribe(key)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 957, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 786, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/base.py", line 800, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 373, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 169, in consume_from
+    return self.start(task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 147, in start
+    self._consume_from(initial_task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 176, in _consume_from
+    with self.reconnect_on_error():
+  File "/home/ro/.pyenv/versions/3.10.18/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 130, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 384, in ensure
+    return retry_over_time(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/commands/core.py", line 2009, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 135, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/news/views.py", line 214, in post
+    self.send_article_notification(article)
+  File "/home/ro/Projects/NewsPortal/news/views.py", line 122, in send_article_notification
+    send_new_article_notification.delay(article.id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/base.py", line 798, in send_task
+    with P.connection._reraise_as_library_errors():
+  File "/home/ro/.pyenv/versions/3.10.18/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+2025-08-12 14:42:42,510 ERROR /home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/utils/log.py Internal Server Error: /create/ (<class 'kombu.exceptions.OperationalError'>, OperationalError('Error 111 connecting to 127.0.0.1:6379. Connection refused.'), <traceback object at 0x746acedde100>)
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 127, in reconnect_on_error
+    yield
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 177, in _consume_from
+    self._pubsub.subscribe(key)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 957, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 786, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/base.py", line 800, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 373, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 169, in consume_from
+    return self.start(task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 147, in start
+    self._consume_from(initial_task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 176, in _consume_from
+    with self.reconnect_on_error():
+  File "/home/ro/.pyenv/versions/3.10.18/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 130, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 384, in ensure
+    return retry_over_time(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/commands/core.py", line 2009, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 135, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/news/views.py", line 214, in post
+    self.send_article_notification(article)
+  File "/home/ro/Projects/NewsPortal/news/views.py", line 122, in send_article_notification
+    send_new_article_notification.delay(article.id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/base.py", line 798, in send_task
+    with P.connection._reraise_as_library_errors():
+  File "/home/ro/.pyenv/versions/3.10.18/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+2025-08-12 14:43:28,152 ERROR /home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/utils/log.py Internal Server Error: /create/ (<class 'kombu.exceptions.OperationalError'>, OperationalError('Error 111 connecting to 127.0.0.1:6379. Connection refused.'), <traceback object at 0x746aced48c80>)
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 127, in reconnect_on_error
+    yield
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 177, in _consume_from
+    self._pubsub.subscribe(key)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 957, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 786, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/base.py", line 800, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 373, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 169, in consume_from
+    return self.start(task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 147, in start
+    self._consume_from(initial_task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 176, in _consume_from
+    with self.reconnect_on_error():
+  File "/home/ro/.pyenv/versions/3.10.18/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 130, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 384, in ensure
+    return retry_over_time(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/commands/core.py", line 2009, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 135, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/news/views.py", line 214, in post
+    self.send_article_notification(article)
+  File "/home/ro/Projects/NewsPortal/news/views.py", line 122, in send_article_notification
+    send_new_article_notification.delay(article.id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/base.py", line 798, in send_task
+    with P.connection._reraise_as_library_errors():
+  File "/home/ro/.pyenv/versions/3.10.18/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+2025-08-12 14:43:28,152 ERROR /home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/utils/log.py Internal Server Error: /create/ (<class 'kombu.exceptions.OperationalError'>, OperationalError('Error 111 connecting to 127.0.0.1:6379. Connection refused.'), <traceback object at 0x746aced48c80>)
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 127, in reconnect_on_error
+    yield
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 177, in _consume_from
+    self._pubsub.subscribe(key)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 957, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 786, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/base.py", line 800, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 373, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 169, in consume_from
+    return self.start(task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 147, in start
+    self._consume_from(initial_task_id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 176, in _consume_from
+    with self.reconnect_on_error():
+  File "/home/ro/.pyenv/versions/3.10.18/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 130, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 384, in ensure
+    return retry_over_time(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/backends/redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/commands/core.py", line 2009, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 135, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ro/Projects/NewsPortal/news/views.py", line 214, in post
+    self.send_article_notification(article)
+  File "/home/ro/Projects/NewsPortal/news/views.py", line 122, in send_article_notification
+    send_new_article_notification.delay(article.id)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/task.py", line 594, in apply_async
+    return app.send_task(
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/celery/app/base.py", line 798, in send_task
+    with P.connection._reraise_as_library_errors():
+  File "/home/ro/.pyenv/versions/3.10.18/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+2025-08-12 14:43:28,155 ERROR /home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/servers/basehttp.py "POST /create/?article_type=article HTTP/1.1" 500 301565 None
+2025-08-12 14:43:28,155 ERROR /home/ro/Projects/NewsPortal/.venv/lib/python3.10/site-packages/django/core/servers/basehttp.py "POST /create/?article_type=article HTTP/1.1" 500 301565 None

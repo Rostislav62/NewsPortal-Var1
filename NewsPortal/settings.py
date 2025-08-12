@@ -2,18 +2,27 @@
 
 import os
 from pathlib import Path
+
+# --- BASE_DIR должен быть раньше load_dotenv ---
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# --- грузим .env из корня проекта ---
 from dotenv import load_dotenv
+load_dotenv(BASE_DIR / '.env')
+
+# --- утилиты для корректного парсинга переменных окружения ---
+def env_bool(name: str, default: bool = False) -> bool:
+    return os.getenv(name, str(default)).strip().lower() in ('1', 'true', 'yes', 'on')
+
+def env_list(name: str, default: str = '') -> list[str]:
+    raw = os.getenv(name, default)
+    return [x.strip() for x in raw.split(',') if x.strip()]
+
 # Периодические задачи Celery
 from celery.schedules import crontab
 
-# Загрузка переменных из .env файла
-load_dotenv()
 
-# Определение BASE_DIR
-BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Использование переменных окружения из .env
-SECRET_KEY = os.getenv('SECRET_KEY')
 
 # Конфигурация для аутентификации Google
 # SOCIAL_AUTH_GOOGLE_CLIENT_ID = os.getenv('SOCIAL_AUTH_GOOGLE_CLIENT_ID')
@@ -24,25 +33,54 @@ SOCIAL_AUTH_YANDEX_OAUTH2_KEY = os.getenv('SOCIAL_AUTH_YANDEX_OAUTH2_KEY')
 SOCIAL_AUTH_YANDEX_OAUTH2_SECRET = os.getenv('SOCIAL_AUTH_YANDEX_OAUTH2_SECRET')
 
 # Email конфигурация из .env файла
-USE_CONSOLE_EMAIL_BACKEND = os.getenv('USE_CONSOLE_EMAIL_BACKEND') == 'True'
-# EMAIL_BACKEND = os.getenv('EMAIL_BACKEND')
-EMAIL_BACKEND_CONSOLE = os.getenv('EMAIL_BACKEND_CONSOLE')
-EMAIL_BACKEND_SMTP = os.getenv('EMAIL_BACKEND_SMTP')
-EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.yandex.ru')
-EMAIL_PORT = int(os.getenv('EMAIL_PORT', 587))
-EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
-EMAIL_USE_SSL = os.getenv('EMAIL_USE_SSL') == 'True'
-EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS') == 'False'
+# USE_CONSOLE_EMAIL_BACKEND = os.getenv('USE_CONSOLE_EMAIL_BACKEND') == 'True'
+# # EMAIL_BACKEND = os.getenv('EMAIL_BACKEND')
+# EMAIL_BACKEND_CONSOLE = os.getenv('EMAIL_BACKEND_CONSOLE')
+# EMAIL_BACKEND_SMTP = os.getenv('EMAIL_BACKEND_SMTP')
+# EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.yandex.ru')
+# EMAIL_PORT = int(os.getenv('EMAIL_PORT', 587))
+# EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+# EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+# EMAIL_USE_SSL = os.getenv('EMAIL_USE_SSL') == 'True'
+# EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS') == 'False'
+
+USE_CONSOLE_EMAIL_BACKEND = env_bool('USE_CONSOLE_EMAIL_BACKEND', True)
+
+EMAIL_BACKEND_CONSOLE = os.getenv('EMAIL_BACKEND_CONSOLE', 'django.core.mail.backends.console.EmailBackend')
+EMAIL_BACKEND_SMTP    = os.getenv('EMAIL_BACKEND_SMTP',    'django.core.mail.backends.smtp.EmailBackend')
+
+EMAIL_BACKEND    = EMAIL_BACKEND_CONSOLE if USE_CONSOLE_EMAIL_BACKEND else EMAIL_BACKEND_SMTP
+EMAIL_HOST       = os.getenv('EMAIL_HOST', 'smtp.yandex.ru')
+EMAIL_PORT       = int(os.getenv('EMAIL_PORT', 587))
+EMAIL_HOST_USER  = os.getenv('EMAIL_HOST_USER', '')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', '')
+EMAIL_USE_SSL    = env_bool('EMAIL_USE_SSL', False)
+EMAIL_USE_TLS    = env_bool('EMAIL_USE_TLS', True)
+DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', EMAIL_HOST_USER or 'no-reply@example.com')
+
+
 # Условие на основе значения USE_CONSOLE_EMAIL_BACKEND
 EMAIL_BACKEND = EMAIL_BACKEND_CONSOLE if USE_CONSOLE_EMAIL_BACKEND else EMAIL_BACKEND_SMTP
 
 WELCOME_EMAIL_VARIANT = int(os.getenv('WELCOME_EMAIL_VARIANT', 1))  # Значение по умолчанию - 1
 
 
-DEBUG = os.getenv('DEBUG', 'False') == 'True'
+# Использование переменных окружения из .env
+# SECRET_KEY = os.getenv('SECRET_KEY')
 
-ALLOWED_HOSTS = []
+# DEBUG = os.getenv('DEBUG', 'False') == 'True'
+
+# ALLOWED_HOSTS = []
+
+SECRET_KEY = os.getenv('SECRET_KEY', 'dev-secret-key')
+
+DEBUG = env_bool('DEBUG', True)  # по умолчанию True для локалки
+
+ALLOWED_HOSTS = env_list('ALLOWED_HOSTS', '127.0.0.1,localhost')
+
+SITE_URL = os.getenv('SITE_URL', 'http://127.0.0.1:8000')  # базовый URL
+
+
 
 # Application definition
 INSTALLED_APPS = [
